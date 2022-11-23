@@ -1,63 +1,51 @@
-body  
-{  
-    margin: 0;  
-    padding: 0;  
-    background-color:aliceblue;  
-    font-family: 'Poppins';  
+body {
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+    font-family: 'Poppins';
     text-decoration: none;
+}
+
+.container {
+    width: 382px;
+    overflow: hidden;
+    margin: auto;
+    margin: 20 0 0 450px;
+    padding: 80px;
+    background: rgb(177, 209, 237);
+    border-radius: 15px;
+    margin-top: -30px;
+
+}
+.register{
+    margin-top: 40px;
+    align-items: center;
+    text-align: center;
+}
+.register input {
+    padding: 5px;
+    margin-top: 20px;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    stroke: none;
+    border: none;
 }  
-.login{  
-        width: 382px;  
-        overflow: hidden;  
-        margin: auto;  
-        margin: 20 0 0 450px;  
-        padding: 80px;  
-        background: rgb(177, 209, 237);  
-        border-radius: 15px ;  
-        margin-top: -30px;
-          
-}  
-h2{  
-    text-align: center;  
-    color: black;  
-    padding: 20px;  
-}  
-label{  
-    color: white;  
-    font-size: 17px;
-  
-}  
-#Uname{  
-    width: 300px;  
-    height: 30px;  
-    border: none;  
-    border-radius: 3px;  
-    padding-left: 8px;  
-    margin-top: 10px;
-}  
-#Pass{  
-    width: 300px;  
-    height: 30px;  
-    border: none;  
-    border-radius: 3px;  
-    padding-left: 8px;  
-    margin-top: 10px;
-}  
-#log{  
-    width: 300px;  
-    height: 30px;  
-    border: none;  
-    border-radius: 17px;  
-    padding-left: 7px;  
-    color: blue;  
-  
-  
-}  
-span{  
-    color: white;  
-    font-size: 17px;  
-}  
-a{  
-    text-align: center; 
+.register button{
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: aliceblue;
+    border:none;
+}
+.register a{
     text-decoration: none;
-}  
+    color: black;
+    padding: 50px;
+}
+h2 {
+    text-align: center;
+    color: black;
+    padding: 20px;
+}
