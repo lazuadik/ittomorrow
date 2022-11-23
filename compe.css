@@ -57,7 +57,7 @@ a:hover{
 }
 
 main{
-    height: 900px;
+    height: 1800px;
     width: 100%;
     background-color: aliceblue;
     position: absolute;
@@ -73,9 +73,23 @@ main{
     margin-right: 150px;
 }
 
-
 .ux h2{
     color: blue;
     margin-top: 200px;
     float:inline-start;
+}
+table, th, td {
+    border: 1px solid black;
+}
+
+.footer{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(179, 179, 222);
+    position: absolute;
+}
+
+.footer p{
+    margin-left: 80px;
+    font-size: smaller;
 }
