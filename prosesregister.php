@@ -10,9 +10,7 @@ if(isset($_POST['register'])){
 
 
     //buat query
-
     $query = pg_query("INSERT INTO peserta (namapeserta, passwordpeserta, emailpeserta, institusipeserta, nimpeserta, namalomba) VALUEs ('$uname', '$password_peserta', '$email', '$asal_institusi', '$nim_peserta', '$nama_lomba')");
-
     if($query==TRUE) {
         header('Location: index.php');
     } else {
