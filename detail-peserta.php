@@ -1,3 +1,7 @@
+<?php
+    include('config.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,13 +20,13 @@
             <h3><a href="dashboard-admin.html" style="color: aliceblue;">Dashboard</a></h3>
         </div>
     </div>
-    <h1>(Kategori Lomba)</h1>
+    <h1><?php $_GET["namalomba"]; ?></h1>
     <div id="peserta">
         <h3>Detail Peserta</h3>
-        <h5>Nama Peserta: </h5>
-        <h5>Asal Institusi: </h5>
-        <h5>Email Tim: </h5>
-        <h5>Link Karya: </h5>
+        <h5>Nama Peserta: <?php $_GET["namapeserta"]; ?></h5>
+        <h5>Asal Institusi: <?php $_GET["institusipeserta"]; ?></h5>
+        <h5>Email Tim: <?php $_GET["email"]; ?></h5>
+        <h5>Link Karya: <?php $_GET["linkkarya"]; ?></h5>
     </div>
 </body>
 </html>
