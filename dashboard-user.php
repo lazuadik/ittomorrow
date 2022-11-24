@@ -30,7 +30,7 @@
             </div>
             <div class="container-2">
                 <h3>Kumpulkan Karya</h3>
-                <form action="" method="">
+                <form class="linkkarya" action="" method="">
                     <input type="text" placeholder="Masukkan Link karya" name="linkkarya" class="linkkarya">
                 </form>
             </div>
