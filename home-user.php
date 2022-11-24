@@ -12,11 +12,11 @@
                 <a href="index.html">IT Tomorrow</a>
             </div>
             <div class="navBar">
-                <a class="active" href="index.html">Home</a>
-                <a href="compe.html">Competitions</a>
-                <a href="about.html">About</a>
-                <a href="dashboard-admin.html" style="padding: 10px 20px; border-radius: 50px; background-color: rgb(179, 179, 222);">Dashboard</a>
-                <a href="login.html" style="padding: 10px 20px; border-radius: 50px; background-color: rgb(179, 179, 222);">Logout</a>
+                <a class="active" href="home-admin.php">Home</a>
+                <a href="compe-admin.php">Competitions</a>
+                <a href="about-admin.php">About</a>
+                <a href="dashboard-admin.php" style="padding: 10px 20px; border-radius: 50px; background-color: rgb(179, 179, 222);">Dashboard</a>
+                <a href="login.php" style="padding: 10px 20px; border-radius: 50px; background-color: rgb(179, 179, 222);">Logout</a>
             </div>
         </header>
         <main>
@@ -32,8 +32,8 @@
             <div class="container-2">
                 <h1>COMPETITIONS</h1>
                 <div class="list-compe">
-                    <a href="#">UX Tomorrow</a>
-                    <a href="#">Hack Tomorrow</a>
+                    <a href="#">Coding Tomorrow</a>
+                    <a href="#">UI Tomorrow</a>
                     <a href="#">Poster Tomorrow</a>
                 </div>
             </div>
