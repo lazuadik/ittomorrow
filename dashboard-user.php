@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -30,8 +31,12 @@
             </div>
             <div class="container-2">
                 <h3>Kumpulkan Karya</h3>
-                <form class="linkkarya" action="" method="">
+                <form action="prosespengumpulan.php" method="">
                     <input type="text" placeholder="Masukkan Link karya" name="linkkarya" class="linkkarya">
+                    <input type="Submit" name="kumpul" VALUE="kumpul" >
+                    <?php if(isset($_GET['status']) && $_GET['status']== 'gagal'): ?>
+                        <span> pengumpulan gagal</span>
+                        <?php endif;?>
                 </form>
             </div>
         </main>
