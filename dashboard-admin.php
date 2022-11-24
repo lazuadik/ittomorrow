@@ -10,10 +10,10 @@
 
 <body>
     <div class="header">
-        <a href="index.html"><img src="logo-ittomorrow.png" style="width: 100px; height: 100px;"></a>
+        <a href="home-admin.php"><img src="logo-ittomorrow.png" style="width: 100px; height: 100px;"></a>
         <div class="navBar">
-            <h3><a href="#" style="color: aliceblue;">Profile</a></h3>
-            <h3><a href="login.html" style="color: aliceblue;">Log out</a></h3>
+            <h3><a href="home-admin.php" style="color: aliceblue;">Home</a></h3>
+            <h3><a href="login-admin.php" style="color: aliceblue;">Log out</a></h3>
         </div>
     </div>
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
@@ -67,7 +67,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><a href="detail-peserta.html"><button>Detail</button></a></td>
+                        <td><a href="detail-peserta.php"><button>Detail</button></a></td>
                         
                     </tr>
                 </tbody>
