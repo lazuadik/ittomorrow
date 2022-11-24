@@ -1,3 +1,8 @@
+<?php
+    include('config.php');
+    $lomba_query = pg_query("select*from lomba");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +15,7 @@
 </head>
 <body>
     <div class="container">
-        <form action="prosesregister.php" method="POST">
+        <form action="prosesregister.php" method="post">
             <div class="register">
                 <h2>Register Page</h2>
                 <input type="text" placeholder="Username" name="namapeserta">
@@ -25,9 +30,12 @@
                 <div class="pilihLomba">
                     <h3>Pilih Lomba</h3>
                     <select name="namalomba">
-                        <option value="Coding">Coding Tomorrow</option>
-                        <option value="UI">UI Tomorrow</option>
-                        <option value="Poster">Poster Tomorrow</option>
+                        <option value=""></option>
+                        <?php while($namalomba = pg_fetch_array($lomba_query)){
+                            echo "<option value=".$namalomba['namalomba'].">".$namalomba['namalomba']."</option>";
+                        }
+
+                        ?>
                     </select>
                 </div>
                 <br>
