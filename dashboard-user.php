@@ -12,7 +12,7 @@
                 <a href="index.html">IT Tomorrow</a>
             </div>
             <div class="navBar">
-                <a class="active" href="index.html">Home</a>
+                <a class="active" href="index.php">Home</a>
                 <a href="compe.html">Competitions</a>
                 <a href="about.html">About</a>
                 <a href="dashboard-user.html" style="padding: 10px 20px; border-radius: 50px; background-color: rgb(179, 179, 222);">Dasboard</a>
@@ -27,6 +27,12 @@
                     <p class="title">UX Tomorrow Participant</p>
                     <p>IPB University</p>
                 </div>
+            </div>
+            <div class="container-2">
+                <h3>Kumpulkan Karya</h3>
+                <form action="" method="">
+                    <input type="text" placeholder="Masukkan Link karya" name="linkkarya" class="linkkarya">
+                </form>
             </div>
         </main>
     </body>
