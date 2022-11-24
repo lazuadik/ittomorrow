@@ -1,5 +1,16 @@
 <?php
-    include('config.php');
+include("config.php");
+if(isset($_POST['login'])&&!empty($_POST['login'])){
+        $namapeserta = $_POST['namapeserta'];
+        $password_peserta = $_POST['passwordpeserta'];
+        $data = pg_query("select * from peserta where namapeserta = '".pg_escape_string($_POST['namapeserta'])."' and passwordpeserta ='".$password_peserta."'");
+        $login_check = pg_num_rows($data);
+        if($login_check > 0) {
+            header('Location: home-user.php');
+        } else {
+            header('Location: login.php?status=gagal');
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -14,17 +25,19 @@
 </head>
 <body>
     <div class="container">
-        <form action="proseslogin.php" method="post">
+        <form action="" method="post">
             <div class="register">
                 <h2>Login Page</h2>
-                <input type="text" placeholder="NIM" name="nimpeserta">
+                <input type="text" placeholder="Nama Peserta" name="namapeserta">
                 <br>
                 <input type="password" placeholder="Password" name="passwordpeserta">
                 <br>
                 <br>
-                <button type="submit" name="login"><strong>Log in</strong></button>
+                <input type="submit" name="login" value="Login"></input>
             </div>
         </form>
+        <br>
+        <a href="login-admin.php" style="text-align: center; text-decoration: none; color: black; margin-left: 130px;">Login as admin</a>
     </div>
 </body>
 </html>
