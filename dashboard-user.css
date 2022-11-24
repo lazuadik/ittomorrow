@@ -1,20 +1,20 @@
-*{
+* {
     box-sizing: border-box;
     font-family: Poppins;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-li{
+li {
     list-style: none;
 }
 
-header{
-    height:80px;
-    width:100%;
-    background-color:white;
+header {
+    height: 80px;
+    width: 100%;
+    background-color: white;
     position: fixed;
     top: 0;
     z-index: 10;
@@ -27,7 +27,7 @@ header{
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.logo{
+.logo {
     font-weight: bold;
     font-size: larger;
     width: 180px;
@@ -36,7 +36,7 @@ header{
     margin-top: 30px;
 }
 
-.navBar{
+.navBar {
     float: right;
     list-style: none;
     margin-top: 30px;
@@ -44,25 +44,26 @@ header{
     font-weight: 1500px;
 }
 
-.navBar a{
+.navBar a {
     color: black;
     font-weight: 1000px;
     margin: 10px 10px;
     padding: 10px 10px;
-    
+
 }
 
-a:hover{
+a:hover {
     color: red;
 }
-main{
+
+main {
     height: 900px;
     width: 100%;
     background-color: aliceblue;
     position: absolute;
 }
 
-.container{
+.container {
     margin-top: 100px;
 }
 
@@ -73,13 +74,29 @@ main{
     margin: auto;
     text-align: center;
     border-radius: 50px;
-  }
-  
-  .title {
+}
+
+.title {
     color: grey;
     font-size: 18px;
-  }
-  
-.card img{
+}
+
+.card img {
     margin-top: 50px;
+}
+
+.container-2 h3 {
+    text-align: center;
+
+}
+
+.linkkarya {
+    display: block;
+    padding: 5px;
+    margin-top: 20px;
+    width: 1000px;
+    height: 30px;
+    border-radius: 5px;
+    stroke: none;
+    border: none;
 }
