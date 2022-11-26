@@ -7,11 +7,11 @@
         $query = pg_query("SELECT * FROM peserta WHERE nimpeserta = $nimpeserta");
         $siswa = pg_fetch_array($query);
 
-        $namapeserta = $siswa['namapeserta'];
-        $asal_institusi = $siswa['institusipeserta'];
-        $email = $siswa['emailpeserta'];
-        $linkkarya = $siswa['linkkarya'];
-        $namalomba = $siswa['namalomba'];
+        $namapeserta = $peserta['namapeserta'];
+        $asal_institusi = $peserta['institusipeserta'];
+        $email = $peserta['emailpeserta'];
+        $linkkarya = $peserta['linkkarya'];
+        $namalomba = $peserta['namalomba'];
 
     }
 ?>
@@ -35,24 +35,24 @@
         </div>
     </div>
     <h1><?php 
-        $query = pg_query("SELECT * FROM peserta where namalomba = $namalomba");
-            while($siswa = pg_fetch_array($query)){
-                echo "<h1>".$siswa['namalomba']."</h1>";
+        $query = pg_query("SELECT * FROM peserta");
+            while($peserta = pg_fetch_array($query)){
+                echo "<h1>".$peserta['namalomba']."</h1>";
             }
     ?></h1>
     <div id="peserta">
         <h3>Detail Peserta</h3>
         <?php
-        $query = pg_query("SELECT * FROM peserta where namalomba = $namalomba");
+        $query = pg_query("SELECT * FROM peserta");
                         // $query = mysqli_query($db, $sql);
 
 
-                        while($siswa = pg_fetch_array($query)){
+                        while($peserta = pg_fetch_array($query)){
 
-                            echo "<h5>"."Nama Peserta:"."</h5>"; echo "<h5>".'>> '.$siswa['namapeserta']."</h5>";
-                            echo "<h5>"."Asal Institusi:"."</h5>"; echo "<h5>".'>> '.$siswa['institusipeserta']."</h5>";
-                            echo "<h5>"."Email Peserta:"."</h5>"; echo "<h5>".'>> '.$siswa['emailpeserta']."</h5>";
-                            echo "<h5>"."Link Karya:"."</h5>"; echo "<h5>".'>> '.$siswa['linkkarya']."</h5>";
+                            echo "<h5>"."Nama Peserta:"."</h5>"; echo "<h5>".'>> '.$peserta['namapeserta']."</h5>";
+                            echo "<h5>"."Asal Institusi:"."</h5>"; echo "<h5>".'>> '.$peserta['institusipeserta']."</h5>";
+                            echo "<h5>"."Email Peserta:"."</h5>"; echo "<h5>".'>> '.$peserta['emailpeserta']."</h5>";
+                            echo "<h5>"."Link Karya:"."</h5>"; echo "<h5>".'>> '.$peserta['linkkarya']."</h5>";
                             
                             }
             ?>
