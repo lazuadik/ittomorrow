@@ -1,5 +1,19 @@
 <?php
     include('config.php');
+
+    if(isset($_GET['nimpeserta'])){
+
+        $nimpeserta = $_GET['nimpeserta'];
+        $query = pg_query("SELECT * FROM peserta WHERE nimpeserta = $nimpeserta");
+        $siswa = pg_fetch_array($query);
+
+        $namapeserta = $siswa['namapeserta'];
+        $asal_institusi = $siswa['institusipeserta'];
+        $email = $siswa['emailpeserta'];
+        $linkkarya = $siswa['linkkarya'];
+        $namalomba = $siswa['namalomba'];
+
+    }
 ?>
 
 <!DOCTYPE html>
@@ -14,19 +28,34 @@
 </head>
 <body>
     <div class="header">
-        <a href="index.html"><img src="logo-ittomorrow.png" style="width: 100px; height: 100px;"></a>
+        <a href="home-admin.php"><img src="logo-ittomorrow.png" style="width: 100px; height: 100px;"></a>
         <div class="navBar">
             <h3><a href="#" style="color: aliceblue;">Profile</a></h3>
             <h3><a href="dashboard-admin.html" style="color: aliceblue;">Dashboard</a></h3>
         </div>
     </div>
-    <h1><?php $_GET["namalomba"]; ?></h1>
+    <h1><?php 
+        $query = pg_query("SELECT * FROM peserta where namalomba = $namalomba");
+            while($siswa = pg_fetch_array($query)){
+                echo "<h1>".$siswa['namalomba']."</h1>";
+            }
+    ?></h1>
     <div id="peserta">
         <h3>Detail Peserta</h3>
-        <h5>Nama Peserta: <?php $_GET["namapeserta"]; ?></h5>
-        <h5>Asal Institusi: <?php $_GET["institusipeserta"]; ?></h5>
-        <h5>Email Tim: <?php $_GET["email"]; ?></h5>
-        <h5>Link Karya: <?php $_GET["linkkarya"]; ?></h5>
+        <?php
+        $query = pg_query("SELECT * FROM peserta where namalomba = $namalomba");
+                        // $query = mysqli_query($db, $sql);
+
+
+                        while($siswa = pg_fetch_array($query)){
+
+                            echo "<h5>"."Nama Peserta:"."</h5>"; echo "<h5>".'>> '.$siswa['namapeserta']."</h5>";
+                            echo "<h5>"."Asal Institusi:"."</h5>"; echo "<h5>".'>> '.$siswa['institusipeserta']."</h5>";
+                            echo "<h5>"."Email Peserta:"."</h5>"; echo "<h5>".'>> '.$siswa['emailpeserta']."</h5>";
+                            echo "<h5>"."Link Karya:"."</h5>"; echo "<h5>".'>> '.$siswa['linkkarya']."</h5>";
+                            
+                            }
+            ?>
     </div>
 </body>
 </html>
