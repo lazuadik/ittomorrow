@@ -1,3 +1,7 @@
+<?php
+    include("config.php");
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -62,13 +66,32 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><a href="detail-peserta.php"><button>Detail</button></a></td>
-                        
+                    <?php
+                        $query = pg_query("SELECT * FROM peserta where namalomba = 'CodingTomorrow'");
+                        $noUrut = 1;
+                        // $query = mysqli_query($db, $sql);
+
+
+                        while($siswa = pg_fetch_array($query)){
+                            echo "<tr>";
+
+                            echo "<td>".$noUrut."</td>";
+                            echo "<td>".$siswa['namapeserta']."</td>";
+                            echo "<td>".$siswa['nimpeserta']."</td>";
+                            echo "<td>".$siswa['institusipeserta']."</td>";
+                            echo "<td>".$siswa['emailpeserta']."</td>";
+                            
+                            echo "<td>";
+                            echo "<a href='detail-peserta.php?id=".$siswa['nimpeserta']."'><button>Detail</button</a>";
+                            echo "<a href='hapus.php?nimpeserta=".$siswa['nimpeserta']."'><button>Diskualifikasi</button</a>";
+                            echo "</td>";
+
+                            echo "</tr>";
+                            $noUrut++;
+                            }
+
+
+                        ?> 
                     </tr>
                 </tbody>
             </table>
@@ -88,12 +111,33 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><a href="detail-peserta.php"><button>Detail</button></a></td>
+                    <?php
+                        $query = pg_query("SELECT * FROM peserta where namalomba = 'UITomorrow'");
+                        $noUrut = 1;
+                        // $query = mysqli_query($db, $sql);
+
+
+                        while($siswa = pg_fetch_array($query)){
+                            echo "<tr>";
+
+                            echo "<td>".$noUrut."</td>";
+                            echo "<td>".$siswa['namapeserta']."</td>";
+                            echo "<td>".$siswa['nimpeserta']."</td>";
+                            echo "<td>".$siswa['institusipeserta']."</td>";
+                            echo "<td>".$siswa['emailpeserta']."</td>";
+                            
+                            echo "<td>";
+                            echo "<a href='detail-peserta.php?id=".$siswa['nimpeserta']."'><button>Detail</button</a>";
+                            echo "<a href='hapus.php?nimpeserta=".$siswa['nimpeserta']."'><button>Diskualifikasi</button</a>";
+                            echo "</td>";
+
+                            echo "</tr>";
+                            $noUrut++;
+
+                            }
+
+
+                        ?>
                     </tr>
                 </tbody>
             </table>
@@ -113,12 +157,33 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
-                        <td>Andhika Rafi Lazuardi</td>
-                        <td>G6401211139</td>
-                        <td>Institut Pertanian Bogor</td>
-                        <td>andhikarafilazuardi@gmail.com</td>
-                        <td><a href="detail-peserta.php"><button>Detail</button></a></td>
+                    <?php
+                        $query = pg_query("SELECT * FROM peserta where namalomba = 'PosterTomorrow'");
+                        $noUrut = 1;
+                        // $query = mysqli_query($db, $sql);
+
+
+                        while($siswa = pg_fetch_array($query)){
+                            echo "<tr>";
+
+                            echo "<td>".$noUrut."</td>";
+                            echo "<td>".$siswa['namapeserta']."</td>";
+                            echo "<td>".$siswa['nimpeserta']."</td>";
+                            echo "<td>".$siswa['institusipeserta']."</td>";
+                            echo "<td>".$siswa['emailpeserta']."</td>";
+                            
+                            echo "<td>";
+                            echo "<a href='detail-peserta.php?id=".$siswa['nimpeserta']."'><button>Detail</button</a>";
+                            echo "<a href='hapus.php?nimpeserta=".$siswa['nimpeserta']."'><button>Diskualifikasi</button</a>";
+                            echo "</td>";
+
+                            echo "</tr>";
+                            $noUrut++;
+                            
+                            }
+
+
+                        ?>
                     </tr>
                 </tbody>
             </table>
@@ -127,6 +192,7 @@
     <div class="footer">
         <p>© Copyright <strong>IT Tomorrow 2022</strong> (Projek Basis Data)</p>
     </div>
+
 </body>
 
 </html>
