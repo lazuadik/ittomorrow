@@ -93,7 +93,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><a href="detail-peserta.html"><button>Detail</button></a></td>
+                        <td><a href="detail-peserta.php"><button>Detail</button></a></td>
                     </tr>
                 </tbody>
             </table>
@@ -118,7 +118,7 @@
                         <td>G6401211139</td>
                         <td>Institut Pertanian Bogor</td>
                         <td>andhikarafilazuardi@gmail.com</td>
-                        <td><a href="detail-peserta.html"><button>Detail</button></a></td>
+                        <td><a href="detail-peserta.php"><button>Detail</button></a></td>
                     </tr>
                 </tbody>
             </table>
