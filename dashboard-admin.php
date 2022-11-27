@@ -34,16 +34,28 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="cot.html">Coding Tomorrow</a></td>
-                        <td>6000</td>
+                        <td> Coding Tomorrow </td>
+                        <?php
+                            $query = pg_query("SELECT * FROM peserta where namalomba = 'CodingTomorrow'");
+                            $banyak = pg_num_rows($query);
+                            echo "<td>".$banyak."</td>"
+                        ?>
                     </tr>
                     <tr class="active-row">
-                        <td><a href="uit.html">UI Tomorrow</a></td>
-                        <td>5150</td>
+                        <td>UI Tomorrow</td>
+                        <?php
+                            $query = pg_query("SELECT * FROM peserta where namalomba = 'UITomorrow'");
+                            $banyak2 = pg_num_rows($query);
+                            echo "<td>".$banyak2."</td>"
+                        ?>
                     </tr>
                     <tr>
-                        <td><a href="pst.html">Poster Tomorrow</a></td>
-                        <td>6000</td>
+                        <td>Poster Tomorrow></td>
+                        <?php
+                            $query = pg_query("SELECT * FROM peserta where namalomba = 'PosterTomorrow'");
+                            $banyak3 = pg_num_rows($query);
+                            echo "<td>".$banyak3."</td>"
+                        ?>
                     </tr>
                     <!-- and so on... -->
                 </tbody>
@@ -82,7 +94,7 @@
                             echo "<td>".$siswa['emailpeserta']."</td>";
                             
                             echo "<td>";
-                            echo "<a href='detail-peserta.php?id=".$siswa['nimpeserta']."'><button>Detail</button</a>";
+                            echo "<a href='detail-peserta.php?id=".$siswa['nimpeserta']."'><button>Detail</button</a>"; 
                             echo "<a href='hapus.php?nimpeserta=".$siswa['nimpeserta']."'><button>Diskualifikasi</button</a>";
                             echo "</td>";
 
