@@ -34,15 +34,15 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="cot.html">Coding Tomorrow</a></td>
+                        <td><a href="cot.php">Coding Tomorrow</a></td>
                         <td>6000</td>
                     </tr>
                     <tr class="active-row">
-                        <td><a href="uit.html">UI Tomorrow</a></td>
+                        <td><a href="uit.php">UI Tomorrow</a></td>
                         <td>5150</td>
                     </tr>
                     <tr>
-                        <td><a href="pst.html">Poster Tomorrow</a></td>
+                        <td><a href="pst.php">Poster Tomorrow</a></td>
                         <td>6000</td>
                     </tr>
                     <!-- and so on... -->
