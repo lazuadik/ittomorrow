@@ -40,20 +40,33 @@ header{
     float: right;
     list-style: none;
     margin-top: 30px;
-    margin-right: 80px;
+    margin-right: 60px;
     font-weight: 1500px;
 }
 
-.navBar a{
+.active{
     color: black;
     font-weight: 1000px;
-    margin: 10px 10px;
+    margin: 10px 20px;
     padding: 10px 10px;
-    
+}
+.btn{
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: rgb(154, 154, 242);
+    margin-right: 20px;
+}
+.btn:hover{
+    color: rgb(154, 154, 242);
+    background-color: rgb(232, 232, 255);
+    outline: none;
+    transition: ease all 0.5s;
 }
 
 a:hover{
-    color: red;
+    color: rgb(154, 154, 242);
+    transition: ease all 0.5s;
 }
 main{
     height: 900px;
