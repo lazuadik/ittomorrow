@@ -13,10 +13,14 @@
             </div>
             <div class="navBar">
                 <a class="active" href="index.php">Home</a>
-                <a href="compe.php">Competitions</a>
-                <a href="about.php">About</a>
-                <a href="register.php" style="padding: 10px 20px; border-radius: 50px; background-color: rgb(179, 179, 222);">Register</a>
-                <a href="login.php" style="padding: 10px 20px; border-radius: 50px; background-color: rgb(179, 179, 222);">Login</a>
+                <a class="active" href="compe.php">Competitions</a>
+                <a class="active" href="about.php">About</a>
+                <box>
+                    <a class="btn"href="register.php">Register</a>
+                </box>
+                <box>
+                    <a class="btn"href="login.php">Login</a>
+                </box>
             </div>
         </header>
         <main>
@@ -27,7 +31,9 @@
                     Departemen Ilmu Komputer IPB (Institut Perdesainan Bogor)
                 </p>
                 <br>
-                <a href="#register" style="padding: 10px 20px; border-radius: 50px; background-color: rgb(179, 179, 222); opacity: 100%;">Daftar Sekarang!</a>
+                <box>
+                    <a class="btn"href="register.php">Daftar Sekarang!</a>
+                </box>
             </div>
             <div class="container-2">
                 <h1>COMPETITIONS</h1>
