@@ -12,9 +12,9 @@
                 <a href="index.php">IT Tomorrow</a>
             </div>
             <div class="navBar">
-                <a class="active" href="index.html">Home</a>
-                <a href="compe.html">Competitions</a>
-                <a href="about.html">About</a>
+                <a class="active" href="index.php">Home</a>
+                <a href="compe.php">Competitions</a>
+                <a href="about.php">About</a>
                 <a href="register.php" style="padding: 10px 20px; border-radius: 50px; background-color: rgb(179, 179, 222);">Register</a>
                 <a href="login.php" style="padding: 10px 20px; border-radius: 50px; background-color: rgb(179, 179, 222);">Login</a>
             </div>
