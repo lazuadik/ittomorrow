@@ -1,0 +1,19 @@
+klien meminta kita untuk membuat website lomba
+
+admin mempunyai username dan juga email untuk login. Admin
+dapat mengatur perlombaan (penentuan juara) dan memberikan informasi kepada peserta.
+Peserta dapat hanya boleh mengikuti 1 perlombaan. Peserta juga mengumpulkan karya 
+berupa judul dan link. 
+
+Admin:
+- mendiskualifikasi peserta
+- view karya
+- memberikan pengumuman
+
+Peserta:
+- Mengedit profil
+- Menghapus profil
+- Submit karya
+- view karya
+
+

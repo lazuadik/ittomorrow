@@ -1,0 +1,7 @@
+jadi, kita di web ini gaperlu ada admin
+user bisa melakukan:
+1. hapus akun
+2. edit akun (profile)
+3. kumpul karya
+4. user punya nim (primary key)
+

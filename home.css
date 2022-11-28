@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+header{
+    height:80px;
+    width:100%;
+    background-color:white;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.logo{
+    font-weight: bold;
+    font-size: larger;
+    width: 180px;
+    float: left;
+    margin-left: 80px;
+    margin-top: 30px;
+}
+
+.navBar{
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+    margin-right: 80px;
+    font-weight: 1500px;
+}
+
+.navBar a{
+    color: black;
+    font-weight: 1000px;
+    margin: 1px 10px;
+    padding: 10px 10px;
+    
+}
+
+a:hover{
+    color: red;
+}
+main{
+    height: 900px;
+    width: 100%;
+    background-color: aliceblue;
+    position: absolute;
+}
+
+.container-1 img{
+    margin-top: 20px;
+    float: right;
+    margin-right: 80px;
+}
+
+.container-1{
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.container-1 h2{
+    color: blue;
+    margin-top: 200px;
+    float:inline-start;
+}
+
+.container-1 a{
+    color: white;
+    margin-top: 30px;
+}
+
+.container-2{
+    margin-top: 200px;
+}
+.container-2 h1{
+    text-align: center;
+}
+
+.list-compe{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.list-compe a{
+    opacity: 80%;
+    background-color: rgb(154, 154, 242);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    margin: 20px;
+}
+
+a:hover{
+    opacity: 100%;
+}
+
+.footer{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(179, 179, 222);
+    position: absolute;
+    margin-top: 200px;
+}
+
+.footer p{
+    margin-left: 80px;
+    font-size: smaller;
+}
