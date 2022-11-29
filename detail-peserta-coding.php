@@ -4,7 +4,7 @@
     if(isset($_GET['nimpeserta'])){
 
         $nimpeserta = $_GET['nimpeserta'];
-        $query = pg_query("SELECT * FROM peserta WHERE nimpeserta = $nimpeserta");
+        $query = pg_query("SELECT namalomba, namapeserta, institusipeserta, emailpeserta, linkkarya FROM peserta P, karya K WHERE P.nimpeserta = '$nimpeserta' AND P.nimpeserta = K.nimpeserta");
         $peserta = pg_fetch_array($query);
 
         $namapeserta = $peserta['namapeserta'];
@@ -34,19 +34,13 @@
             <h3><a href="dashboard-admin.html" style="color: aliceblue;">Dashboard</a></h3>
         </div>
     </div>
-    <h1><?php 
-        $query = pg_query("SELECT * FROM peserta where namalomba = $namalomba");
-            while($peserta = pg_fetch_array($query)){
-                echo "<h1>".$peserta['namalomba']."</h1>";
-            }
-    ?></h1>
+    <h1><?php echo $namalomba ?></h1>
     <div id="peserta">
         <h3>Detail Peserta</h3>
-        <h5>Nama:</h5>
-        <h5><?=$namapeserta?></h5>
-        <h5></h5>
-        <h5></h5>
-
+        <h5>Nama Peserta: <?php echo $namapeserta ?></h5>
+        <h5>Asal Institusi: <?php echo $asal_institusi ?></h5>
+        <h5>Email: <?php echo $email ?></h5>
+        <h5>Link Karya: <?php echo $linkkarya ?></h5>
     </div>
 </body>
 </html>
