@@ -14,6 +14,7 @@
     <title>Register | IT Tomorrow</title>
 </head>
 <body>
+    <a href="index.php"><img src="logo-ittomorrow.png" style="width: 100px; margin: 50px; position:fixed;"></a>
     <div class="container">
         <form action="prosesregister.php" method="post">
             <div class="register">
