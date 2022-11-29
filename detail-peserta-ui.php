@@ -4,7 +4,7 @@
     if(isset($_GET['nimpeserta'])){
 
         $nimpeserta = $_GET['nimpeserta'];
-        $query = pg_query("SELECT * FROM peserta WHERE nimpeserta = $nimpeserta");
+        $query = pg_query("SELECT namalomba, namapeserta, institusipeserta, emailpeserta, linkkarya FROM peserta P, karya K WHERE P.nimpeserta = '$nimpeserta' AND P.nimpeserta = K.nimpeserta");
         $peserta = pg_fetch_array($query);
 
         $namapeserta = $peserta['namapeserta'];
@@ -34,28 +34,13 @@
             <h3><a href="dashboard-admin.html" style="color: aliceblue;">Dashboard</a></h3>
         </div>
     </div>
-    <h1><?php 
-        $query = pg_query("SELECT * FROM peserta where namalomba = 'UITomorrow'");
-            while($peserta = pg_fetch_array($query)){
-                echo "<h1>".$peserta['namalomba']."</h1>";
-            }
-    ?></h1>
+    <h1><?php echo $namalomba ?></h1>
     <div id="peserta">
         <h3>Detail Peserta</h3>
-        <?php
-        $query = pg_query("SELECT * FROM peserta where namalomba = 'UITomorrow'");
-                        // $query = mysqli_query($db, $sql);
-
-
-                        while($peserta = pg_fetch_array($query)){?>
-
-                         <?php   echo "<h5>"."Nama Peserta:"."</h5>"; echo "<h5>".'>> '.$peserta['namapeserta']."</h5>";
-                            echo "<h5>"."Asal Institusi:"."</h5>"; echo "<h5>".'>> '.$peserta['institusipeserta']."</h5>";
-                            echo "<h5>"."Email Peserta:"."</h5>"; echo "<h5>".'>> '.$peserta['emailpeserta']."</h5>";
-                            echo "<h5>"."Link Karya:"."</h5>"; echo "<h5>".'>> '.$peserta['linkkarya']."</h5>";
-                            ?>
-                           <?php }
-            ?>
+        <h5>Nama Peserta: <?php echo $namapeserta ?></h5>
+        <h5>Asal Institusi: <?php echo $asal_institusi ?></h5>
+        <h5>Email: <?php echo $email ?></h5>
+        <h5>Link Karya: <?php echo $linkkarya ?></h5>
     </div>
 </body>
 </html>
