@@ -40,7 +40,7 @@
         <h5>Nama Peserta: <?php echo $namapeserta ?></h5>
         <h5>Asal Institusi: <?php echo $asal_institusi ?></h5>
         <h5>Email: <?php echo $email ?></h5>
-        <h5>Link Karya: <?php echo $linkkarya ?></h5>
+        <h5>Link Karya: <a href="<?php echo $linkkarya ?>"><?php echo $linkkarya ?></a></h5>
     </div>
 </body>
 </html>
