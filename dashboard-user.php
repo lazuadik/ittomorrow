@@ -1,19 +1,26 @@
 <?php
     session_start();
     include("config.php");
-    if(!isset($_SESSION["login"])){
-    header("Location: login.php");
-    exit;
-}
+    if(!isset($_SESSION["namapeserta"])){
+        header("Location: login.php");
+        exit;
+    }
+    if(isset($_POST['kumpul'])){
+        $kueri = pg_query("SELECT nimpeserta FROM peserta where namapeserta = '".$_SESSION['namapeserta']."'");
+        $nimpeserta = pg_fetch_array($kueri)['nimpeserta'];
+        if($_POST['nimpeserta'] == $nimpeserta){
+            $query_kumpul = pg_query("INSERT into karya (nimpeserta, linkkarya) values ('$nimpeserta', '".$_POST['linkkarya']."')");
+            header("location: dashboard-user.php?status=berhasil");
+        }else{
+            header("location: dashboard-user.php?status=gagal");
+        }
+    }
 
-    if(isset($_POST['login-user'])){
-        $uname = $_POST['namapeserta'];
-        $asal_institusi = $_POST['institusipeserta'];
-        $nama_lomba = $_POST['namalomba'];
-    
-        $data = pg_query("select * from peserta where namapeserta = '".pg_escape_string($_POST['namapeserta'])."' and institusipeserta ='".$asal_institusi."' and namalomba ='".$nama_lomba."'");
-        
-}        
+    $query = pg_query("SELECT * FROM peserta WHERE namapeserta = '".$_SESSION['namapeserta']."'");
+    $peserta = pg_fetch_array($query);
+    $namapeserta = $peserta['namapeserta'];
+    $asal_institusi = $peserta['institusipeserta'];
+    $namalomba = $peserta['namalomba'];
 ?>
 
 <!DOCTYPE html>
@@ -41,21 +48,29 @@
             <div class="container">
                 <div class="card">
                     <img src="profile.jpg" alt="John" style="width: 150px; height: 150px; border-radius: 20px;">
-                    <?php
-                        $query = pg_query("SELECT * FROM peserta where $nama_lomba = '".$_POST['namalomba']."'");
-
-                        echo "<h3>" .$uname = "ronaldo". "</h3>";
-                        echo $asal_institusi = $_POST['institusipeserta'];
-                        echo $nama_lomba = $_POST['namalomba'];
-                    ?>
+                    <h4><?php echo $namapeserta ?></h4>
+                    <h4><?php echo $asal_institusi ?></h4>
+                    <h4><?php echo $namalomba ?></h4>
                 </div>
             </div>
             <div class="container-2">   
+                <br>
                 <h3 style="text-align: center;">Kumpulkan Karya</h3>
                 <form action="" method="post" style="text-align:center; margin: 0 auto; width: 200px;"> 
+                    <input type="text" placeholder="Konfirmasi NIM" name="nimpeserta" class="nimpeserta">
                     <input type="text" placeholder="Masukkan Link karya" name="linkkarya" class="linkkarya">
                     <input type="Submit" name="kumpul" value="Kumpul">
-                    <input type="Submit" name="edit" value="Edit">
+                    <a href="edit.php">Edit</a>
+                    <?php
+                        if(isset($_GET['status'])){
+                            if($_GET['status'] == 'gagal'){; ?>
+                                <p>NIM yang dimasukkan <strong>salah!<strong></p>
+                            <?php }
+                            else if($_GET['status'] == 'berhasil'){; ?>
+                                 <p>mamamu pasti bangga</p>
+                            <?php }
+                        };
+                    ?>
                 </form>
             </div>
         </main>
